@@ -1,0 +1,31 @@
+---
+switch1:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
+switch2:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
+atacante:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+cliente:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2
+firewall:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+zabbix:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5

@@ -1,0 +1,403 @@
+{
+  "name": "lab01",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-4cd20627dd71",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "atacante": {
+      "index": "0",
+      "shortname": "atacante",
+      "longname": "clab-lab01-atacante",
+      "fqdn": "atacante.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/atacante",
+      "kind": "linux",
+      "image": "wbitt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/atacante",
+        "clab-node-longname": "clab-lab01-atacante",
+        "clab-node-name": "atacante",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "cliente": {
+      "index": "1",
+      "shortname": "cliente",
+      "longname": "clab-lab01-cliente",
+      "fqdn": "cliente.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/cliente",
+      "kind": "linux",
+      "image": "wbitt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/cliente",
+        "clab-node-longname": "clab-lab01-cliente",
+        "clab-node-name": "cliente",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "firewall": {
+      "index": "2",
+      "shortname": "firewall",
+      "longname": "clab-lab01-firewall",
+      "fqdn": "firewall.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/firewall",
+      "kind": "linux",
+      "image": "wbitt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/firewall",
+        "clab-node-longname": "clab-lab01-firewall",
+        "clab-node-name": "firewall",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "switch1": {
+      "index": "3",
+      "shortname": "switch1",
+      "longname": "clab-lab01-switch1",
+      "fqdn": "switch1.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/switch1",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/switch1",
+        "clab-node-longname": "clab-lab01-switch1",
+        "clab-node-name": "switch1",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+      ]
+    },
+    "switch2": {
+      "index": "4",
+      "shortname": "switch2",
+      "longname": "clab-lab01-switch2",
+      "fqdn": "switch2.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/switch2",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/switch2",
+        "clab-node-longname": "clab-lab01-switch2",
+        "clab-node-name": "switch2",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+      ]
+    },
+    "zabbix": {
+      "index": "5",
+      "shortname": "zabbix",
+      "longname": "clab-lab01-zabbix",
+      "fqdn": "zabbix.lab01.io",
+      "group": "",
+      "labdir": "/home/acemar/lab01/clab-lab01/zabbix",
+      "kind": "linux",
+      "image": "zabbix/zabbix-appliance:alpine-latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "47364ba",
+        "clab-mgmt-net-bridge": "br-4cd20627dd71",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/acemar/lab01/clab-lab01/zabbix",
+        "clab-node-longname": "clab-lab01-zabbix",
+        "clab-node-name": "zabbix",
+        "clab-node-type": "",
+        "clab-owner": "acemar",
+        "clab-topo-file": "/home/acemar/lab01/topologia.yml",
+        "containerlab": "lab01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 10051,
+          "port": 10051,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 10051,
+          "port": 10051,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8080,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8080,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "atacante",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:44:3e:60",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch1",
+          "interface": "sw1-p1",
+          "mac": "aa:c1:ab:66:45:63",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "firewall",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c4:a9:a1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch1",
+          "interface": "sw1-p2",
+          "mac": "aa:c1:ab:d1:3d:8d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "firewall",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:b5:2d:a2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch2",
+          "interface": "sw2-p1",
+          "mac": "aa:c1:ab:8e:a3:3a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "cliente",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:af:0a:7f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch2",
+          "interface": "sw2-p2",
+          "mac": "aa:c1:ab:b5:cf:8c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "zabbix",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:50:1c:ad",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch2",
+          "interface": "sw2-p3",
+          "mac": "aa:c1:ab:04:b3:e4",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
